@@ -31,7 +31,6 @@ Only job posts that pass the filtering rules and aren't duplicates get written t
 | wwr_community-sports-partners-web-developer | Web Developer | Community Sports Partners | worldwide | Remote | wwr | INTERESTED | https://weworkremotely.com/remote-jobs/... | 
 | remoteok_1134087 | Frontend Developer | DemoTech | worldwide | Remote | remoteok | INTERESTED | https://remoteok.com/remote-jobs/... | 
 
-![Google Sheets output](screenshots/google-sheet-output.png)
 
 ## Features
 
