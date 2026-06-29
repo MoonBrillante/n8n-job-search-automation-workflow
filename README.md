@@ -26,8 +26,8 @@ Only job posts that pass the filtering rules and aren't duplicates get written t
 
 ## Output Example
 | job_id | title | company | location | work_type | platform | status | url | 
-|---|---|---|---|---|---|---|---|---|
-| jooble_507219307 | Software Engineer | CloudWorks | Europe | Hybrid | jooble | INTERESTED | https://jooble.org/desc/... |
+|---|---|---|---|---|---|---|---|
+| jooble_507219307 | Software Engineer | CloudWorks | Europe | Hybrid | jooble | INTERESTED | https://jooble.org/desc/... | 
 | wwr_community-sports-partners-web-developer | Web Developer | Community Sports Partners | worldwide | Remote | wwr | INTERESTED | https://weworkremotely.com/remote-jobs/... | 
 | remoteok_1134087 | Frontend Developer | DemoTech | worldwide | Remote | remoteok | INTERESTED | https://remoteok.com/remote-jobs/... | 
 
