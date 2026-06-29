@@ -11,16 +11,6 @@ This project demonstrates a practical automation pipeline for job data collectio
 ## Workflow Overview
 
 ![Workflow overview](screenshots/workflow-overview.png)
-n8n Job Search - API Integration
-
-Schedule Trigger → Wake Backend → Wait → Filter Rules Config → Login (JWT)
-→ Read Search Config → Prepare Search Requests → Route By Platform
-  ├── Jooble        → HTTP Jooble POST       → Parse and Filter Jobs ──┐
-  ├── WeWorkRemotely → RSS WWR                → Normalize WWR Jobs ────┤
-  └── Other sources  → HTTP Other Sources GET → Normalize WWR Jobs ────┘
-→ Deduplicate Current Run → Filter New Jobs Only
-  ├── Append New Jobs to Sheet  (Google Sheets, review log)
-  └── Create Job in Backend     (POST /api/jobs, system of record)
 
 Only job posts that pass the filtering rules and aren't duplicates get written to the Sheet and the backend.
 
@@ -33,14 +23,13 @@ Only job posts that pass the filtering rules and aren't duplicates get written t
 | Technical Support Engineer | Europe | remote | remotive | TRUE |
 | frontend | Europe | remote | wwr | TRUE |
 
-![Search configuration sheet](screenshots/search-config-sheet.png)
 
 ## Output Example
-| job_id | title | company | location | work_type | platform | status | url | scrapedFrom |
+| job_id | title | company | location | work_type | platform | status | url | 
 |---|---|---|---|---|---|---|---|---|
-| jooble_507219307 | Software Engineer | CloudWorks | Europe | Hybrid | jooble | INTERESTED | https://jooble.org/desc/... | jooble |
-| wwr_community-sports-partners-web-developer | Web Developer | Community Sports Partners | worldwide | Remote | wwr | INTERESTED | https://weworkremotely.com/remote-jobs/... | wwr |
-| remoteok_1134087 | Frontend Developer | DemoTech | worldwide | Remote | remoteok | INTERESTED | https://remoteok.com/remote-jobs/... | remoteok |
+| jooble_507219307 | Software Engineer | CloudWorks | Europe | Hybrid | jooble | INTERESTED | https://jooble.org/desc/... |
+| wwr_community-sports-partners-web-developer | Web Developer | Community Sports Partners | worldwide | Remote | wwr | INTERESTED | https://weworkremotely.com/remote-jobs/... | 
+| remoteok_1134087 | Frontend Developer | DemoTech | worldwide | Remote | remoteok | INTERESTED | https://remoteok.com/remote-jobs/... | 
 
 ![Google Sheets output](screenshots/google-sheet-output.png)
 
