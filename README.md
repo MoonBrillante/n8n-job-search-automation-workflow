@@ -34,7 +34,7 @@ This project demonstrates a practical automation pipeline for job data collectio
 ## Features
 
 - **Scheduled automation** – Runs automatically on a configurable schedule.
-- **Cold-start resilience** — Pings a lightweight backend health-check endpoint with automatic retries, plus a fixed wait buffer, before authenticating, so a sleeping free-tier backend doesn't break a scheduled run.
+- **Cold-start resilience** —  If the backend is asleep (common on free-tier hosting), a health-check ping with retries wakes it up first, then a short wait gives it time to fully start before login is attempted.
 - **Config-driven search setup** – Search keywords, locations, target platforms, and active/inactive status are managed entirely from a Google Sheet, requiring no code changes to add or disable a search.
 - **Multi-source ingestion via dynamic routing** – A single platform-based Switch node routes each search request to its target source based on the `platform` field.
 - **Centralized filtering rules** — Target-role keywords and excluded keywords are defined once in a shared configuration node and referenced by every parsing branch.
