@@ -2,7 +2,7 @@
 
 ## Overview
 
-**n8n Job Search Automation Workflow**  is an automated workflow built with n8n to collect job posts from multiple public job sources, including Jooble, WeWorkRemotely (RSS), RemoteOK, Remotive, and Himalayas.
+**n8n Job Search Automation Workflow**  is an automated workflow built with n8n to collect job posts from multiple public job sources, including Jooble, We Work Remotely (RSS), RemoteOK, Remotive, and Himalayas.
 
 The workflow runs on a scheduled trigger, prepares search requests, handles different request methods for each source, parses and filters job listings, removes duplicates based on existing records, and appends only new matching jobs to Google Sheets.
 
