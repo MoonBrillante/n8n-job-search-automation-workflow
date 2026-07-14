@@ -91,7 +91,7 @@ The number of items processed at each step varies depending on the search config
 | HTTP Jooble POST | HTTP Request | Fetches job listings from Jooble via POST. |
 | RSS WWR | RSS Feed Read | Fetches job listings from WeWorkRemotely's RSS feed. |
 | HTTP Other Sources - GET | HTTP Request | Fetches job listings from RemoteOK, Remotive, and Himalayas via GET. |
-| Parse and Filter Jobs | Code | Parses Jooble's raw response, applies the shared filtering rules, normalizes fields, and generates a stable deduplication ID. |
+| Parse and Filter Jobs | Code | Parses Jooble/RemoteOK/Remotive/Himalayas' raw responses, applies the shared keyword rules, normalizes fields, and generates a stable deduplication ID. |
 | Normalize WWR Jobs | Code | Parses WeWorkRemotely's RSS response, applies the shared keyword rules, normalizes fields, and generates a stable deduplication ID. |
 | Deduplicate Current Run | Code | Removes duplicate job IDs produced within the same execution. |
 | Filter New Jobs Only | Remove Duplicates / Deduplication | Keeps only job listings not already processed in a previous run. |
