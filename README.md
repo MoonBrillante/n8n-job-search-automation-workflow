@@ -105,8 +105,8 @@ The number of items processed at each step varies depending on the search config
 
 * n8n, either self-hosted or n8n Cloud
 * Google account with Google Sheets access
-* Jooble API key, if Jooble is enabled as a source
-* Access to the public job sources used in the workflow, such as RemoteOK and Remotive
+* Jooble API key, only needed if you include Jooble as one of your configured sources
+* Access to the public job sources used in the workflow: RemoteOK, Remotive, Himalayas, and WeWorkRemotely
 
 ### Setup
 
@@ -116,8 +116,9 @@ The number of items processed at each step varies depending on the search config
 4. Add the Jooble API key in the relevant HTTP request node, if Jooble is enabled.
 5. Replace the Google Sheet URLs/IDs and the backend URL in the workflow nodes with your own.
 6. Confirm the `Wake Backend` node's URL points at your backend's health-check endpoint, and that Retry On Fail is enabled.
-7. Run the workflow manually to test the output, including a test run after the backend has been idle, to confirm the cold-start handling works.
-8. Activate the workflow schedule only after confirming the filtered results and both write destinations are correct.
+7. Confirm the `Login - Get JWT Token` node has your backend's login credentials configured, so it can retrieve a valid JWT.
+8. Run the workflow manually to test the output, including a test run after the backend has been idle, to confirm the cold-start handling works.
+9. Activate the workflow schedule only after confirming the filtered results and both write destinations are correct.
    
 ## Configuration Reference
 
