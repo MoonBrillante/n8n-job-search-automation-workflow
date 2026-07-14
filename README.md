@@ -133,7 +133,7 @@ The number of items processed at each step varies depending on the search config
 
 ## Notes on Item Counts
 
-The number of items shown in n8n may vary between executions. This depends on the search configuration, responses from each job source, the shared filtering rules, the two-layer deduplication checks, and existing records in both the backend database and the Google Sheet.
+The number of items shown in n8n may vary between executions. This depends on the search configuration, responses from each job source, the shared keyword rules, the two-layer deduplication checks, and existing records in both the backend database and the Google Sheet.
 
 For this reason, this documentation focuses on the automation process and architecture rather than fixed item counts.
 
