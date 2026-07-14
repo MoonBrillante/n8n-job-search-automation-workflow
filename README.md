@@ -51,7 +51,7 @@ Wake Backend (GET /health, with retry on fail)
         ↓
 Wait (fixed buffer, covers remaining cold-start time)
         ↓
-Filter Rules Config (shared keyword/location rules, referenced downstream)
+Filter Rules Config (shared keyword rules, referenced downstream)
         ↓
 Login - Get JWT Token
         ↓
@@ -64,8 +64,8 @@ Route By Platform (Switch, branches on the `platform` field)
         ├── WeWorkRemotely → RSS WWR
         └── Other sources  → HTTP Other Sources - GET
                 ↓
-        Parse and Filter Jobs   (Jooble branch)
-        Normalize WWR Jobs      (WeWorkRemotely + Other sources branches)
+        Parse and Filter Jobs   (Jooble + Other sources branches)
+        Normalize WWR Jobs      (WeWorkRemotely branches)
                 ↓
         Deduplicate Current Run
                 ↓
