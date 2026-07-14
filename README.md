@@ -36,11 +36,11 @@ This project demonstrates a practical automation pipeline for job data collectio
 - **Scheduled automation** – Runs automatically on a configurable schedule.
 - **Cold-start resilience** — Pings a lightweight backend health-check endpoint with automatic retries, plus a fixed wait buffer, before authenticating, so a sleeping free-tier backend doesn't break a scheduled run.
 - **Config-driven search setup** – Search keywords, locations, target platforms, and active/inactive status are managed entirely from a Google Sheet, requiring no code changes to add or disable a search.
-- **Multi-source ingestion via dynamic routing** – A single platform-based Switch node routes each search request to its target source, replacing a chain of nested IF conditions; adding a new source requires only a new routing rule, not changes to existing branches.
-- **Centralized filtering rules** — Target-role keywords, excluded keywords (seniority, unrelated roles, etc.), and allowed/blocked locations are defined once in a shared configuration node and referenced by every parsing branch, instead of being duplicated and risking drift between sources.
+- **Multi-source ingestion via dynamic routing** – A single platform-based Switch node routes each search request to its target source based on the `platform` field.
+- **Centralized filtering rules** — Target-role keywords and excluded keywords are defined once in a shared configuration node and referenced by every parsing branch.
 - **Job parsing and normalization** – Each source's raw response format is parsed into a common schema (title, company, location, work mode, salary, posted date, external job ID, etc.).
 - **Two-layer duplicate prevention** — Results are deduplicated within the current run, then checked against previously processed job IDs before anything is written downstream.
-- **Dual structured output** — Filtered, deduplicated job listings are written to both a Google Sheet (for quick manual review) and a backend REST API (the application's database of record), each receiving an independently mapped payload.
+- **Dual structured output** — Filtered, deduplicated job listings are written to both a Google Sheet (for quick manual review) and a backend REST API (the application's database of record).
 
 ## Workflow Architecture
 
