@@ -12,8 +12,6 @@ This project demonstrates a practical automation pipeline for job data collectio
 
 ![Workflow overview](screenshots/workflow-overview.png)
 
-Only job posts that pass the filtering rules and aren't duplicates get written to the Sheet and the backend.
-
 ## Configuration Example
 | keyword | location | work_type | platform | active |
 |---|---|---|---|---|
