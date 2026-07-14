@@ -59,7 +59,7 @@ Read Search Config (Google Sheets)
         ↓
 Prepare Search Requests
         ↓
-Route By Platform (Switch, branches on the `platform` field)
+Route By Source Type (Switch, branches on the `platform` field)
         ├── Jooble        → HTTP Jooble POST
         ├── WeWorkRemotely → RSS WWR
         └── Other sources  → HTTP Other Sources - GET
