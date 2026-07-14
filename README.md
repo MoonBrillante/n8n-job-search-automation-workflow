@@ -65,7 +65,7 @@ Route By Source Type (Switch, branches on the `platform` field)
         └── Other sources  → HTTP Other Sources - GET
                 ↓
         Parse and Filter Jobs   (Jooble + Other sources branches)
-        Normalize WWR Jobs      (WeWorkRemotely branches)
+        Normalize WWR Jobs      (WeWorkRemotely branch)
                 ↓
         Deduplicate Current Run
                 ↓
@@ -74,7 +74,7 @@ Route By Source Type (Switch, branches on the `platform` field)
                 └── Create Job in Backend
 ```
 
-The number of items processed at each step varies depending on the search configuration, each source's API/RSS response, the shared filtering rules, and which job IDs already exist in the backend and the Google Sheet.
+The number of items processed at each step varies depending on the search configuration, each source's API/RSS response, the shared keyword rules, and which job IDs already exist in the backend and the Google Sheet.
 
 ## Node Reference
 
